@@ -1,0 +1,37 @@
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+  <div class="div-form">
+    <h1>{{ title }}</h1>
+    <div>
+      <label for="task">Tâche : </label>
+      <input
+        id="task"
+        type="text"
+        placeholder="Créez votre tâche"
+        formControlName="task"
+      />
+    </div>
+
+    <div *ngIf="taskForm.controls['task'].errors?.['maxlength']">
+      <p class="validator-error">Ce champs contient trop de caractères</p>
+    </div>
+
+    <div class="div-select">
+      <label for="states">Statut : </label>
+      <select formControlName="state" id="states">
+        <option [value]="state" *ngFor="let state of states">
+          {{ state }}
+        </option>
+      </select>
+    </div>
+
+    <div class="div-btn">
+      <button
+        class="btn-valid"
+        [disabled]="this.taskForm.invalid"
+        type="submit"
+      >
+        Validez
+      </button>
+    </div>
+  </div>
+</form>

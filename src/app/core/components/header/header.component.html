@@ -1,0 +1,12 @@
+<div class="div-head">
+  <div class="logo" [routerLink]="route">
+    <img src="../../../../assets/images/logoCKP.png" alt="logo CKP" />
+  </div>
+
+  <div class="btn-add">
+    <app-btn route="/add-task" label="Nouvelle Tâche"></app-btn>
+  </div>
+  <div class="btn-add-min" *ngIf="router.url != '/add-task'">
+    <app-btn route="/add-task" label="+"></app-btn>
+  </div>
+</div>

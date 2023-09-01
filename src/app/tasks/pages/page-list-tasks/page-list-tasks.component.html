@@ -1,0 +1,15 @@
+<span class="container" *ngIf="collection.length > 0">
+  <app-column-tasks
+    class="column-container"
+    [collection]="collection"
+    *ngFor="let column of columns"
+    [title]="column"
+  >
+  </app-column-tasks>
+</span>
+
+<span *ngIf="collection.length === 0">
+  <div class="main-vide">
+    <p>Veuillez cliquer sur le bouton nouvelle tâche.</p>
+  </div>
+</span>

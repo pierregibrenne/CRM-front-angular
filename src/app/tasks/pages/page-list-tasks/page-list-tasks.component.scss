@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  min-height: 750px;
+}
+
+.column-container {
+  width: 20%;
+  margin: 15px 0px;
+  padding: 15px 0px;
+  border-radius: 15px;
+  background-color: #e3e7e9;
+  text-align: center;
+}
+
+.main-vide {
+  min-height: 700px;
+  padding: 50px;
+}
+
+.main-vide > p {
+  font-size: 2em;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    min-height: 500px;
+  }
+
+  .column-container {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 770px) {
+  .column-container {
+    width: 90%;
+  }
+}

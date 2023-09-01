@@ -1,0 +1,64 @@
+.state-en-cours {
+  background-color: #ffd670;
+}
+.state-termine {
+  background-color: #60d394;
+}
+.state-bloque {
+  background-color: #ff928b;
+}
+.state-a-faire {
+  background-color: #cdb4db;
+}
+
+h1 {
+  font-size: xx-large;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+.card-task {
+  margin: 15px;
+  padding: 10px 0px;
+}
+.card-task > p {
+  background-color: aliceblue;
+  padding: 10px;
+  margin: 0px 10px 10px 10px;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn-container > span {
+  color: aliceblue;
+  padding: 5px;
+  border: 1px solid black;
+  width: 83px;
+  cursor: pointer;
+}
+.btn-container > .btn-modifier {
+  background-color: #004466;
+}
+
+.btn-container > .btn-delete {
+  background-color: #ff928b;
+}
+
+.btn-add {
+  color: aliceblue;
+  text-align: center;
+  width: 50%;
+  font-size: 1.3em;
+  margin: 0px auto;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: #46b0ea;
+}
+
+.p-vide {
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 1.2em;
+}

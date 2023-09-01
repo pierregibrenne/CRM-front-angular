@@ -1,0 +1,33 @@
+<div class="column-container">
+  <h1>{{ title }}</h1>
+
+  <span *ngIf="filted.length === 0">
+    <div class="btn-add" *ngIf="title === test">
+      <app-btn route="/add-task" label="Ajouter une tâche"></app-btn>
+    </div>
+    <p *ngIf="title != test" class="p-vide">Pas de tâche {{ title }}</p>
+  </span>
+
+  <div *ngIf="filted">
+    <div
+      class="card-task"
+      *ngFor="let item of filted"
+      appState
+      [etat]="item.state"
+    >
+      <p>{{ item.task }}</p>
+      <div class="btn-container">
+        <!-- <span class="btn-delete" (click)="deleteItem(item.id)">Supprimer</span> -->
+        <span class="btn-modifier" (click)="goToEdit(item)">Modifier</span>
+        <select (change)="changeState(item, $event)">
+          <option
+            *ngFor="let state of states"
+            [selected]="state === item.state"
+          >
+            {{ state }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
